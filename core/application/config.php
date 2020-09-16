@@ -141,8 +141,10 @@ class config {
     private function load_Zend_framework() {
         $path_library = PATH_ROOT . DS . 'core/library';
         set_include_path(get_include_path() . PATH_SEPARATOR . $path_library);
-        require (PATH_ROOT . DS . 'core/library/Zend/Loader.php');
-        require (PATH_ROOT . DS . 'core/library/Zend/Loader/Autoloader.php');
+		$path_library_zend = PATH_ROOT . DS . 'core/library/vendor/zendframework/zendframework1/library/';
+        set_include_path(get_include_path() . PATH_SEPARATOR . $path_library_zend);
+        require (PATH_ROOT . DS . 'core/library/vendor/zendframework/zendframework1/library/Zend/Loader.php');
+        require (PATH_ROOT . DS . 'core/library/vendor/zendframework/zendframework1/library/Zend/Loader/Autoloader.php');
         Zend_Loader_Autoloader::getInstance()->setFallbackAutoloader(true);
     }
 
