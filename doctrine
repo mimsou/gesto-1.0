@@ -1,0 +1,4 @@
+#!/usr/bin/env php
+<?php
+
+include('./core/library/vendor/doctrine/orm/bin/doctrine.php');

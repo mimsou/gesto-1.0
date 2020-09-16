@@ -1,5 +1,12 @@
 {
+
+    "config": {
+        "vendor-dir": "core/library/vendor"
+    },
+ 
     "require": {
-        "doctrine/orm": "*"
+		"doctrine/doctrine-bundle": "^1.6",
+        "doctrine/orm": "^2.5",
+		"zendframework/zendframework1":"^1.2"
     }
 }
