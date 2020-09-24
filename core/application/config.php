@@ -26,6 +26,7 @@ class config {
 
     public static function init() {
         $config = self::getInstance();
+        $config->vendorAutoload();
         $config->load_Zend_framework();
         $config->chk_install();
         $config->load_application_class();
@@ -132,6 +133,14 @@ class config {
 
     public function getVars() {
         return $this->vars;
+    }
+    
+    private function vendorAutoload(){
+        
+        if(file_exists(PATH_ROOT . DS .'core/library/vendor/autoload.php')){
+            require PATH_ROOT . DS . 'core/library/vendor/autoload.php';
+        }
+        
     }
 
     private function load_application_class() {

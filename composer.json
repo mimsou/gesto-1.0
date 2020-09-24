@@ -1,12 +1,29 @@
 {
-
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/"
+        },
+        "classmap": [
+            "core/application/AppKernel.php",
+			"core/application/AppCache.php"
+        ] 
+    },
     "config": {
         "vendor-dir": "core/library/vendor"
     },
- 
+
     "require": {
-		"doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
-		"zendframework/zendframework1":"^1.2"
+        "zendframework/zendframework1": "^1.2",
+        "symfony/console": "^4.0",
+        "symfony/maker-bundle": "^1.11",
+        "symfony/http-kernel": "4.4",
+        "symfony/yaml": "^5.1",
+        "symfony/routing": "4.4"
+    },
+
+    "extra": {
+        "symfony-app-dir": "core"
     }
 }
